@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shevanka's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="theme-switch-wrapper">
+                <i class="fas fa-sun"></i> <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <div class="slider round"></div>
+                </label>
+                <i class="fas fa-moon"></i> </div>
+
+            <ul id="nav-links"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Hi, I'm Shevanka Bagus Dwiyudi Kurniawan</h1>
+            <p class="subtitle">Junior Software Engineer</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </section>
+
+        <section id="about" class="page-section">
+            <div class="content-wrapper">
+                <h2>About Me</h2>
+        
+                <div class="about-container">
+            
+                <div class="about-image">
+                    <img src="img\IMG_20251019_160726.png" alt="A photo of Shevanka Bagus Dwiyudi Kurniawan">
+                </div>
+            
+                <div class="about-text">
+                    <p>
+                        Hello! I'm a passionate Junior Software Engineer and a student at Politeknik Elektronika Negeri Surabaya (PENS). 
+                        I love building solutions to real-world problems, from web applications to foundational software. 
+                        I'm driven by a desire to learn and grow in the tech industry.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Shevanka" target="_blank" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/Shevanka-Kurniawan" target="_blank" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page-section bg-light">
+            <div class="content-wrapper">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    
+                    <div class="project-card">
+                        <h3>Class App</h3>
+                        <p>A web-based application to monitor our class's cash flow, college schedule, and task deadlines. It also serves as a central repository for class materials (PDFs, PPTX).</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Class Website</h3>
+                        <p>A showcase website to display the projects my classmates and I have completed. Built to practice web development and team collaboration.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>College Programming Tasks</h3>
+                        <p>A collection of my completed college assignments and mini-projects in various languages, including C, HTML, CSS, and JavaScript.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page-section">
+            <div class="content-wrapper">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">C</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">Git & GitHub</span>
+                    <span class="skill">R</span>
+                    <span class="skill">SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section bg-light">
+            <div class="content-wrapper">
+                <h2>Contact</h2>
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                
+                <form id="contact-form" action="https://formspree.io/f/xgvpnbnl" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">Send Message</button>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shevanka Bagus Dwiyudi Kurniawan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
