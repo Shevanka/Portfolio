@@ -44,7 +44,7 @@ nav {
 .div-contain {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 nav .logo {
@@ -124,12 +124,13 @@ nav ul li a:hover {
   padding: 5rem 2rem;
   max-width: 960px;
   margin: 0 auto;
+  margin-bottom: 5px;
   text-align: center;
 }
 
 .content-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   text-align: center;
 }
 
@@ -171,20 +172,59 @@ nav ul li a:hover {
   color: #0056b3; /* A darker, more saturated blue */
 }
 
-/* Skills Grid */
+/* --- UPDATED: Modern Skills Section --- */
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1.25rem; /* More breathing room */
 }
 
 .skill {
+  /* Glassmorphism Base */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  /* Text & Sizing */
+  color: var(--text-color);
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  font-size: 1rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 0.6rem; /* Space between icon and text */
+  cursor: default;
+
+  /* Smooth Animation */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon styling */
+.skill i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect: Lift and Glow */
+.skill:hover {
   background: var(--primary-color);
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+  border-color: var(--primary-color);
+}
+
+/* Make icon white on hover */
+.skill:hover i {
+  color: #fff;
 }
 
 /* Footer */
@@ -464,6 +504,26 @@ body.dark-mode .project-card:hover h3 {
   color: #4dabf7; /* A lighter, brighter blue */
 }
 
+/* --- Dark Mode Skills --- */
+body.dark-mode .skill {
+  background: rgba(40, 40, 40, 0.6); /* Dark glass */
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-dark);
+}
+
+body.dark-mode .skill i {
+  color: #4dabf7; /* Lighter blue for dark mode visibility */
+}
+
+body.dark-mode .skill:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+body.dark-mode .skill:hover i {
+  color: #fff;
+}
+
 /* ... (rest of your dark mode styles) ... */
 
 /* --- NEW: Full-Screen Sections (Desktop-Only) --- */
@@ -486,61 +546,13 @@ body.dark-mode .project-card:hover h3 {
   }
 }
 
+/* Places the canvas fixed on the screen */
 #canvas-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Places it behind everything */
-  pointer-events: none; /* Allows clicking through the canvas */
-}
-
-/* Update Hero to be transparent so we can see the background */
-.hero {
-  background-color: transparent;
-}
-
-/* Optional: Make the body background transparent to ensure canvas visibility */
-body {
-  background-color: transparent;
-}
-
-/* --- FIX: Force Background Visibility --- */
-
-/* 1. Remove default white background from the browser window
-html,
-body {
-  background-color: transparent !important;
-}
-
- 2. Fix the Hero section to be transparent so you can see the dots 
-.hero {
-  background-color: transparent !important;
-}  */
-
-/* 3. Make the particle canvas stay fixed in the background */
-#canvas-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Behind everything */
-}
-
-/* 4. (Optional) Add a "Glass" effect to content so you can read text 
-   but still see particles behind it */
-.page-section,
-.project-card,
-nav {
-  background-color: rgba(255, 255, 255, 0.85); /* 85% opacity */
-  backdrop-filter: blur(5px); /* Blurs the particles behind the text */
-}
-
-/* Dark mode version of the glass effect */
-body.dark-mode .page-section,
-a body.dark-mode .project-card,
-body.dark-mode nav {
-  background-color: rgba(30, 30, 30, 0.85);
+  z-index: 0; /* Sits above the base background but behind content */
+  pointer-events: none; /* CRITICAL: Allows you to click links/buttons "through" the canvas */
 }
