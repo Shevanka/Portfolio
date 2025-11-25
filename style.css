@@ -1,486 +1,487 @@
-
 /* General Styling */
 :root {
-    --primary-color: #007BFF;
-    --secondary-color: #f4f4f4; /* Light gray background */
-    --text-color: #333;
-    --card-bg: #ffffff;
-    --shadow: 0 4px 8px rgba(0,0,0,0.1);
-    
-    /* NEW: Dark Mode Variables */
-    --bg-dark: #121212;
-    --text-dark: #f0f0f0;
-    --card-bg-dark: #1e1e1e;
-    --shadow-dark: 0 4px 8px rgba(255,255,255,0.05);
-    --secondary-dark: #2a2a2a; /* Dark gray bg */
+  --primary-color: #007bff;
+  --secondary-color: #f4f4f4; /* Light gray background */
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* NEW: Dark Mode Variables */
+  --bg-dark: #121212;
+  --text-dark: #f0f0f0;
+  --card-bg-dark: #1e1e1e;
+  --shadow-dark: 0 4px 8px rgba(255, 255, 255, 0.05);
+  --secondary-dark: #2a2a2a; /* Dark gray bg */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    line-height: 1.6;
-    color: var(--text-color);
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: var(--card-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.div-contain {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 nav .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    padding: 0 1rem;
-    background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0 1rem;
+  background-color: var(--card-bg);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero .subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--primary-color);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Content Sections */
 .page-section {
-    scroll-margin-top: 5rem;
-    /* This class is for the full-width section background */
-    /* It's intentionally left blank for now, */
-    /* but will be used by the @media query */
+  scroll-margin-top: 5rem;
+  /* This class is for the full-width section background */
+  /* It's intentionally left blank for now, */
+  /* but will be used by the @media query */
 }
 
 .content-wrapper {
-    /* This class holds the actual content */
-    padding: 5rem 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
+  /* This class holds the actual content */
+  padding: 5rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .bg-light {
-    background: var(--secondary-color);
+  background: var(--secondary-color);
 }
 
 /* Project Grid */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .project-card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-    text-align: left;
-    /* UPDATE THIS LINE: Add 'color' to the transition */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: left;
+  /* UPDATE THIS LINE: Add 'color' to the transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    /* NEW: Add a transition for the color change */
-    transition: color 0.3s ease;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  /* NEW: Add a transition for the color change */
+  transition: color 0.3s ease;
 }
 
 /* NEW: Add this rule to change the h3 color on hover */
 .project-card:hover h3 {
-    color: #0056b3; /* A darker, more saturated blue */
+  color: #0056b3; /* A darker, more saturated blue */
 }
 
 /* Skills Grid */
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .skill {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 500;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem;
-    background: #333;
-    color: #fff;
+  text-align: center;
+  padding: 2rem;
+  background: #333;
+  color: #fff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav ul {
-        display: none; /* Simple responsive nav for now */
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero .subtitle {
-        font-size: 1.2rem;
-    }
+  nav ul {
+    display: none; /* Simple responsive nav for now */
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 /* --- NEW: About Me Section Styles --- */
 
 .about-container {
-    display: flex;
-    align-items: center; /* Vertically centers the text and image */
-    justify-content: center;
-    gap: 2rem; /* Space between image and text */
-    text-align: left; /* Overrides the 'text-align: center' from .content-section */
+  display: flex;
+  align-items: center; /* Vertically centers the text and image */
+  justify-content: center;
+  gap: 2rem; /* Space between image and text */
+  text-align: left; /* Overrides the 'text-align: center' from .content-section */
 }
 
 .about-image {
-    flex-basis: 200px; /* Sets a base width for the image container */
-    flex-shrink: 0; /* Prevents the image from shrinking */
+  flex-basis: 200px; /* Sets a base width for the image container */
+  flex-shrink: 0; /* Prevents the image from shrinking */
 }
 
 .about-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* This makes it a circle */
-    object-fit: cover; /* Prevents the image from stretching */
-    aspect-ratio: 1 / 1; /* Ensures it's a perfect circle */
-    box-shadow: var(--shadow); /* Uses the shadow variable we defined earlier */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* This makes it a circle */
+  object-fit: cover; /* Prevents the image from stretching */
+  aspect-ratio: 1 / 1; /* Ensures it's a perfect circle */
+  box-shadow: var(--shadow); /* Uses the shadow variable we defined earlier */
 }
 
 .about-text {
-    flex-grow: 1; /* Allows the text to take up the remaining space */
+  flex-grow: 1; /* Allows the text to take up the remaining space */
 }
 
 /* --- UPDATED: Responsive Section --- */
 /* Add these new rules inside your existing @media (max-width: 768px) block */
 @media (max-width: 768px) {
-    
-    /* ... (your existing mobile menu styles) ... */
+  /* ... (your existing mobile menu styles) ... */
 
-    /* NEW: About Me stacking for mobile */
-    .about-container {
-        flex-direction: column; /* Stacks the image on top of the text */
-        text-align: center;
-    }
+  /* NEW: About Me stacking for mobile */
+  .about-container {
+    flex-direction: column; /* Stacks the image on top of the text */
+    text-align: center;
+  }
 
-    .about-image {
-        width: 150px; /* Make the image a bit smaller on mobile */
-        height: 150px;
-        margin-bottom: 1.5rem; /* Add space below the image */
-    }
+  .about-image {
+    width: 150px; /* Make the image a bit smaller on mobile */
+    height: 150px;
+    margin-bottom: 1.5rem; /* Add space below the image */
+  }
 
-    .about-text {
-        text-align: center; /* Center the text on mobile */
-    }
+  .about-text {
+    text-align: center; /* Center the text on mobile */
+  }
 }
 
 /* --- NEW: Social Media Links (About Me) --- */
 .social-links {
-    display: flex;
-    justify-content: flex-start; /* Aligns icons to the left on desktop */
-    gap: 1.5rem; /* Space between icons */
-    margin-top: 1.5rem; /* Space above the icons */
+  display: flex;
+  justify-content: flex-start; /* Aligns icons to the left on desktop */
+  gap: 1.5rem; /* Space between icons */
+  margin-top: 1.5rem; /* Space above the icons */
 }
 
 .social-links a {
-    color: var(--text-color); /* Use your default text color */
-    font-size: 2rem; /* Make icons larger */
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--text-color); /* Use your default text color */
+  font-size: 2rem; /* Make icons larger */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--primary-color); /* Use your primary blue on hover */
-    transform: scale(1.1); /* Slight zoom effect on hover */
+  color: var(--primary-color); /* Use your primary blue on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
-
 
 /* --- UPDATED: Responsive Section --- */
 /* Add this new rule inside your existing @media (max-width: 768px) block */
 @media (max-width: 768px) {
-    
-    /* ... (your existing mobile styles) ... */
+  /* ... (your existing mobile styles) ... */
 
-    /* NEW: Center the social icons on mobile */
-    .social-links {
-        justify-content: center;
-    }
+  /* NEW: Center the social icons on mobile */
+  .social-links {
+    justify-content: center;
+  }
 }
 
 /* --- NEW: Contact Form Styles --- */
 
 #contact-form {
-    max-width: 600px; /* Constrain form width for readability */
-    margin: 2rem auto 0 auto; /* Center the form and add space on top */
-    text-align: left; /* Align labels to the left */
+  max-width: 600px; /* Constrain form width for readability */
+  margin: 2rem auto 0 auto; /* Center the form and add space on top */
+  text-align: left; /* Align labels to the left */
 }
 
 .form-group {
-    margin-bottom: 1.5rem; /* Space between form groups */
+  margin-bottom: 1.5rem; /* Space between form groups */
 }
 
 .form-group label {
-    display: block; /* Put label on its own line */
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+  display: block; /* Put label on its own line */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 /* Style for both text inputs and the textarea */
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit; /* Use the same font as the body */
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit; /* Use the same font as the body */
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Highlight the field when the user clicks on it */
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 /* Make the submit button full-width and add a pointer cursor */
 #contact-form button[type="submit"] {
-    width: 100%;
-    cursor: pointer;
+  width: 100%;
+  cursor: pointer;
 }
 
 /* --- NEW: Dark Mode Toggle Switch --- */
 .theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-color); /* Default to light mode text color */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color); /* Default to light mode text color */
 }
 .theme-switch-wrapper .fa-sun {
-    color: #f39c12; /* Sun yellow */
+  color: #f39c12; /* Sun yellow */
 }
 .theme-switch-wrapper .fa-moon {
-    color: #f1c40f; /* Moon yellow/gray */
+  color: #f1c40f; /* Moon yellow/gray */
 }
 
 .theme-switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
 }
-.theme-switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
 }
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
 }
 input:checked + .slider {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 input:checked + .slider:before {
-    transform: translateX(26px);
+  transform: translateX(26px);
 }
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px;
 }
 .slider.round:before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
-
 
 /* --- NEW: Dark Mode Styles (Applied when body has 'dark-mode' class) --- */
 body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 body.dark-mode nav {
-    background: var(--card-bg-dark);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 body.dark-mode nav ul li a {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 body.dark-mode nav ul li a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 body.dark-mode .mobile-menu-toggle span {
-    background-color: var(--text-dark);
+  background-color: var(--text-dark);
 }
 body.dark-mode .hero {
-    background-color: var(--card-bg-dark);
+  background-color: var(--card-bg-dark);
 }
 body.dark-mode .page-section.bg-light {
-    background: var(--secondary-dark);
+  background: var(--secondary-dark);
 }
 body.dark-mode .project-card {
-    background: var(--card-bg-dark);
-    box-shadow: var(--shadow-dark);
+  background: var(--card-bg-dark);
+  box-shadow: var(--shadow-dark);
 }
 body.dark-mode .about-image img {
-    box-shadow: var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
 }
 body.dark-mode .social-links a {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 body.dark-mode .social-links a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 body.dark-mode #contact-form input,
 body.dark-mode #contact-form textarea {
-    background: var(--secondary-dark);
-    border-color: #444;
-    color: var(--text-dark);
+  background: var(--secondary-dark);
+  border-color: #444;
+  color: var(--text-dark);
 }
 body.dark-mode #contact-form input:focus,
 body.dark-mode #contact-form textarea:focus {
-    border-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 body.dark-mode footer {
-    background: #1e1e1e; /* Same as card-bg-dark */
+  background: #1e1e1e; /* Same as card-bg-dark */
 }
 body.dark-mode .theme-switch-wrapper {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 body.dark-mode .project-card {
-    background: var(--card-bg-dark);
-    box-shadow: var(--shadow-dark);
-    /* NEW: Add the transition here for dark mode too */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  background: var(--card-bg-dark);
+  box-shadow: var(--shadow-dark);
+  /* NEW: Add the transition here for dark mode too */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 /* NEW: Add hover effects for dark mode */
 body.dark-mode .project-card:hover {
-    transform: translateY(-5px); /* The lift effect */
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.08); /* A subtle white glow */
+  transform: translateY(-5px); /* The lift effect */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.08); /* A subtle white glow */
 }
 
 /* NEW: Add h3 hover effect for dark mode */
 body.dark-mode .project-card:hover h3 {
-    color: #4dabf7; /* A lighter, brighter blue */
+  color: #4dabf7; /* A lighter, brighter blue */
 }
 
 /* ... (rest of your dark mode styles) ... */
 
 /* --- NEW: Full-Screen Sections (Desktop-Only) --- */
 @media (min-width: 1024px) {
-    .page-section { 
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;  /* <-- This line does the vertical centering */
-    }
+  .page-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* <-- This line does the vertical centering */
+  }
 }
 
 /* Fix mobile menu in dark mode */
 @media (max-width: 768px) {
-    body.dark-mode nav ul {
-        background: var(--card-bg-dark);
-    }
-    body.dark-mode nav ul li a {
-        border-bottom: 1px solid var(--secondary-dark);
-    }
+  body.dark-mode nav ul {
+    background: var(--card-bg-dark);
+  }
+  body.dark-mode nav ul li a {
+    border-bottom: 1px solid var(--secondary-dark);
+  }
 }
